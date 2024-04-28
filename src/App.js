@@ -1,24 +1,48 @@
-import logo from './logo.svg';
 import './App.css';
+import Header from './components/Header'; 
+import User from './components/User';
 
-function App() {
+const isLoggedIn = true;
+const friends = ["Kaan", "Can", "Baran", "Haya", "Çebi", "Sinem"];
+const friendss = [
+  {
+    id: 1,
+    name: "Kaan",
+    surname: "Dişli"
+  },
+  {
+    id: 2,
+    name: "Can",
+    surname: "Geniş"
+  },
+  {
+    id: 3,
+    name: "Baran",
+    surname: "Açıkel"
+  },
+  {
+    id: 4,
+    name: "Haya",
+    surname: "Mamlouk"
+  },
+  {
+    id: 5,
+    name: "Ali Can",
+    surname: "Çebi"
+  },
+  {
+    id: 6,
+    name: "Sinem",
+    surname: "Sevinç"
+  }
+];
+
+
+function App(){
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <User name="Doruk" surname="Özgenç" age={22} isLoggedIn={isLoggedIn} friends={friendss} address={{title :  "Ataşehir/İstanbul", zip : 34746}} />
+    </>
   );
 }
 
